@@ -102,16 +102,14 @@ const Chat = () => {
 
   const scrollToBottom = () => {
     conversationBottom.current.scrollIntoView({ behavior: 'smooth' });
-    console.log(conversationBottom.current);
   };
 
   useEffect(() => {
     const myInterval = setInterval(() => {
       setNb(Math.floor(Math.random() * messages.length));
-    }, 2000);
+    }, 4000);
     return () => {
       clearInterval(myInterval);
-      console.log(myInterval);
     };
   }, []);
 
